@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DownleftRock : MonoBehaviour
 {
+    
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +18,13 @@ public class DownleftRock : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            animator.SetTrigger("open");
+        }
+    }
+
 }
