@@ -6,6 +6,7 @@ public class DownleftRock : MonoBehaviour
 {
     
     public Animator animator;
+    public AudioClip RockDown;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class DownleftRock : MonoBehaviour
         if(other.tag == "Player")
         {
             animator.SetTrigger("open");
+            gameObject.GetComponent<AudioSource>().PlayOneShot(RockDown);
         }
     }
 

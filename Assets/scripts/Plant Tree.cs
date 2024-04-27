@@ -25,23 +25,24 @@ public class PlantTree : MonoBehaviour
         if(other.tag == "Player")
         {
             ShowUI();
+            
         }
     }
 
     public void HideUI()
     {
         ui.SetActive(false);
-
-        Cursor.lockState =  CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
     }
 
     public void ShowUI()
     {
         ui.SetActive(true);
-
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
     }
 
     public void PlantSap()
